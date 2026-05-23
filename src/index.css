@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-roboto: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-barlow: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: Georgia, ui-serif, serif;
+
+  --color-brand-light: #5eead4;
+  --color-brand-cyan: #06b6d4;
+  --color-brand-blue: #0ea5e9;
+  --color-brand-dark: #0f172a;
+  
+  --color-bg-dark: #0a0e17;
+  --color-card-dark: rgba(30, 41, 59, 0.5); /* slate-800 with opacity */
+  --color-card-border: rgba(14, 165, 233, 0.2);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-dark);
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: #ffffff;
+  }
+
+  p {
+    font-family: var(--font-sans);
+  }
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #38bdf8, #5eead4);
+}
+
+.glass-card {
+  background: var(--color-card-dark);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-card-border);
+}
+
+.glow-border {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+}
